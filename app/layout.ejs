@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    <%- title %>
+  </title>
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons"> -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+
+  <!-- font-family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- all.css -->
+  <link rel="stylesheet" href="./assets/style/all.css">
+
+  <!-- ckeditor5 -->
+  <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
+</head>
+
+<body>
+
+  <div class="nav position-fixed d-flex flex-column justify-content-between bg-light pt-5">
+    <div class="nav-link-list">
+      <a class="nav-link active ps-6" aria-current="page" href="#"><img src="/assets/images/logo-ANSWER.svg"
+          alt="LOGO"></a>
+      <a class="nav-link" href="#"><i class="material-icons pe-3 ps-6">assessment</i>Dashboard</a>
+      <a class="nav-link" href="#"><i class="material-icons pe-3 ps-6">question_answer</i>Question</a>
+      <a class="nav-link" href="#"><i class="material-icons pe-3 ps-6">assignment</i>Assignment</a>
+      <a class="nav-link" href="#"><i class="material-icons pe-3 ps-6">video_library</i>Course</a>
+      <a class="nav-link" href="#"><i class="material-icons pe-3 ps-6">supervisor_account</i>Admin</a>
+      <a class="nav-link" href="#"><i class="material-icons pe-3 ps-6">settings</i>Settings</a>
+    </div>
+    <a class="nav-user ps-6 pt-3" href="#">
+      <div class="d-flex">
+        <div class="flex-shrink-0">
+          <img class="user-photo rounded-circle" src="/assets/images/andychen_2000x2000.jpeg" alt="user photo">
+        </div>
+        <div class="flex-grow-1 ms-3">
+          <h6 class="user-name">Andy Chen</h6>
+          <p class="user-email">andy0401@mail.com</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="main">
+    <%- contents %>
+  </div>
+
+  <script>
+    ClassicEditor
+      .create(document.querySelector('#editor'))
+      .then(editor => {
+        console.log(editor);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  </script>
+
+
+
+
+
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
