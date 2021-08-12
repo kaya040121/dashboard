@@ -13197,4 +13197,10 @@ a:hover {
   min-height: 263px;
 }
 
+.download:hover {
+  z-index: 2;
+  color: #1a1e21;
+  background-color: #e9ecef;
+}
+
 /*# sourceMappingURL=all.css.map */
