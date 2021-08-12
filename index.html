@@ -45,7 +45,7 @@
       <a class="nav-link" href="#"><i class="material-icons pe-3 ps-6 align-middle">supervisor_account</i>Admin</a>
       <a class="nav-link" href="#"><i class="material-icons pe-3 ps-6 align-middle">settings</i>Settings</a>
     </div>
-    <a class="nav-user ps-6 pt-3" href="#">
+    <a class="nav-user ps-6 pt-3 pb-3" href="#">
       <div class="d-flex">
         <div class="flex-shrink-0">
           <img class="user-photo rounded-circle" src="assets/images/andychen_2000x2000.jpeg" alt="user photo">
@@ -104,48 +104,48 @@
         </div>
         <div class="list-group">
           <div class="card">
-            <div class="card-header">
+            <a href="#" class="card-header">
               <div class="assignment-title d-flex justify-content-between">
-                <p>Chapter Assignment 2</p>
+                <p class="pb-1">Chapter Assignment 2</p>
                 <p>4 hrs ago</p>
               </div>
               <div class="message d-flex justify-content-between">
                 <h6 class="message-title">Please check this file…</h6>
                 <p class="author">Emily Wang</p>
               </div>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
+            </a>
+            <div class="list-group list-group-flush">
+              <a href="#" class="list-group-item">
                 <div class="assignment-title d-flex justify-content-between">
-                  <p>Chapter Assignment 1</p>
+                  <p class="pb-1">Chapter Assignment 1</p>
                   <p>12 hrs ago</p>
                 </div>
                 <div class="message d-flex justify-content-between">
                   <h6 class="message-title">My Homework</h6>
                   <p class="author">David Xu</p>
                 </div>
-              </li>
-              <li class="list-group-item">
+              </a>
+              <a href="#" class="list-group-item">
                 <div class="assignment-title d-flex justify-content-between">
-                  <p>Final Assignment</p>
+                  <p class="pb-1">Final Assignment</p>
                   <p>18 hrs ago</p>
                 </div>
                 <div class="message d-flex justify-content-between">
                   <h6 class="message-title">Have a problem with this…</h6>
                   <p class="author">Tony Wei</p>
                 </div>
-              </li>
-              <li class="list-group-item">
+              </a>
+              <a href="#" class="list-group-item">
                 <div class="assignment-title d-flex justify-content-between">
-                  <p>Final Assignment</p>
+                  <p class="pb-1">Final Assignment</p>
                   <p>19 hrs ago</p>
                 </div>
                 <div class="message d-flex justify-content-between">
                   <h6 class="message-title">Did I do it right?</h6>
                   <p class="author">Christina Lin</p>
                 </div>
-              </li>
-            </ul>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -160,7 +160,7 @@
             <div class="card-header">
               <div class="assignment-title d-flex justify-content-between align-items-center">
                 <div class="message-title">
-                  <p>Chapter Assignment 2</p>
+                  <p class="pb-1">Chapter Assignment 2</p>
                   <h6 class="message-title">Please check this file…</h6>
                 </div>
                 <div class="icon">
@@ -174,14 +174,33 @@
                   <img class="user-photo rounded-circle" src="assets/images/emilywang_2134x2134.jpeg" alt="user photo">
                 </div>
                 <div class="flex-grow-1 ms-3 border-bottom pb-3 pe-6">
-                  <h6 class="user-name">Emily Wang</h6>
-                  <p class="date">10:38 AM (4 hours ago)</p>
-                  <p class="card-text">Hi Teacher, the attached file is my homework of chapter 2. And here comes a
+                  <h6 class="user-name pb-1">Emily Wang</h6>
+                  <p class="date pb-3">10:38 AM (4 hours ago)</p>
+                  <p class="card-text pb-3">Hi Teacher, the attached file is my homework of chapter 2. And here comes a
                     question: Why in the following code the height of the div is bigger than the height of the img ?
                     There is a gap below the image, but it doesn’t seems to be a padding/margin. What is the gap or
                     extra space below image?</p>
                   <button type="button" class="download btn btn-light border border-1"><i
                       class="material-icons align-middle">attach_file</i>HW-2-David.zip</button>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="replyModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <!-- <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Reply an answer</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div> -->
+                    <div class="modal-body">
+                      <div id="editor">Reply an answer…</div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-outline-success px-6" data-bs-dismiss="modal">Cancel</button>
+                      <button type="button" class="btn btn-success px-6">Reply</button>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- <div id="editor">Reply an answer…</div> -->
@@ -193,8 +212,8 @@
                   <div class="flex-grow-1 ms-3 pe-6">
                     <div class="d-flex justify-content-between">
                       <div class="reply-box">
-                        <h6 class="user-name">Andy Chen (You)</h6>
-                        <p class="date">13:24 AM (1 hours ago)</p>
+                        <h6 class="user-name pb-1">Andy Chen (You)</h6>
+                        <p class="date pb-3">13:24 AM (1 hours ago)</p>
                       </div>
                       <div class="toolbar d-flex">
                         <a href="#" class="grade"><i class="material-icons-outlined">
@@ -237,7 +256,10 @@
           </nav>
           <ul class="button">
             <button type="button" class="btn btn-outline-success px-6">Mark as read</button>
-            <button type="button" class="btn btn-success px-6" id="btn-reply">Reply</button>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success px-6" data-bs-toggle="modal" data-bs-target="#replyModal">
+              Reply
+            </button>
           </ul>
         </div>
       </div>
