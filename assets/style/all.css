@@ -13103,11 +13103,6 @@ fieldset:disabled .btn {
   }
 }
 
-*, *::before, ::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 img {
   height: auto;
   max-width: 100%;
